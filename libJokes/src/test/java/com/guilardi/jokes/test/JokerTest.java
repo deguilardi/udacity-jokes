@@ -1,4 +1,4 @@
-package com.udacity.gradle.jokes.test;
+package com.guilardi.jokes.test;
 
 import com.udacity.gradle.jokes.Joker;
 
