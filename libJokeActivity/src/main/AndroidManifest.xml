@@ -6,8 +6,7 @@
         android:allowBackup="false"
         android:label="@string/app_name">
         <activity
-            android:name=".JokeActivity"
-            android:label="@string/app_name">
+            android:name=".JokeActivity">
         </activity>
     </application>
 
