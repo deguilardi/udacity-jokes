@@ -17,9 +17,13 @@ public class JokeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_joke);
 
         Intent intent = getIntent();
-        Bundle extras = intent.getExtras();
-        String joke = extras.getString(EXTRA_JOKE);
-        mJokeView = findViewById(R.id.joke);
-        mJokeView.setText(joke);
+        if(intent.hasExtra(EXTRA_JOKE)) {
+            Bundle extras = intent.getExtras();
+            if (extras != null) {
+                String joke = extras.getString(EXTRA_JOKE);
+                mJokeView = findViewById(R.id.joke);
+                mJokeView.setText(joke);
+            }
+        }
     }
 }

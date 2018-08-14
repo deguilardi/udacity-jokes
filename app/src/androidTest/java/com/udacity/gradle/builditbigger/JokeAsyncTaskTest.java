@@ -36,10 +36,10 @@ public class JokeAsyncTaskTest extends ApplicationTestCase<Application> {
     public void testJokeIsFetced() throws Throwable {
         JokeTask task = new JokeTask(new JokeTask.Listener() {
             @Override
-            public void onComplete(String joke) {
-                assertTrue("Joke can't be empty nor null", !TextUtils.isEmpty(joke));
-            }
+            public void onComplete(String joke) {}
         });
         task.execute(JOKE_ID);
+        String joke = task.get();
+        assertTrue("Joke can't be empty nor null", !TextUtils.isEmpty(joke));
     }
 }
